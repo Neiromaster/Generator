@@ -1,11 +1,9 @@
 <template>
-
   <div class="checkbox">
-    <input ref="input" class="checkbox"
+    <input class="checkbox"
            type="checkbox"
            :id="id"
-           autocomplete="off"
-           :checked="active"
+           :checked="checked"
            :name="name"
     />
     <label :for="id" @click.prevent="toggle">{{ title }}</label>
@@ -15,39 +13,20 @@
 <script>
   export default {
     name: 'n-checkbox',
-    model: {
-      prop: 'checked',
-      event: 'change',
-    },
     props: {
       id: String,
-      checked: null,
       value: null,
       title: '',
     },
     data() {
       return {
         name: this.id,
+        checked: this.value,
       };
     },
-    computed: {
-      active() {
-        debugger;
-        return this.checked === this.value;
-      },
-    },
     methods: {
-      focus() {
-        this.$refs.input.focus();
-      },
       toggle() {
-        this.focus();
-        debugger;
-        if (this.active) {
-          this.$emit('change', false);
-        } else {
-          this.$emit('change', this.value);
-        }
+        this.checked = !this.checked;
       },
     },
   };
