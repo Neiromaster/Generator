@@ -1,7 +1,7 @@
 <template>
   <button class="btn btn-primary col-xs-12"
-          :name="name"
-          :type="type">{{ text }}</button>
+          :name="id"
+          :type="action">{{ title }}</button>
 </template>
 
 <script>
@@ -10,9 +10,9 @@
   export default {
     name: 'n-button',
     props: {
-      name: String,
-      text: String,
-      type: {
+      id: String,
+      title: String,
+      action: {
         type: String,
         default: 'button',
         validator: type => TYPES.indexOf(type) >= 0,

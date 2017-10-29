@@ -10,6 +10,7 @@
       :type="localType"
       :placeholder="placeholder"
       :name="name"
+      :value="value"
       class="form-control"
     >
   </div>
@@ -20,11 +21,6 @@
 
   export default {
     name: 'n-text',
-    data() {
-      return {
-        name: this.id,
-      };
-    },
     props: {
       id: {
         type: String,
@@ -38,10 +34,19 @@
         type: String,
         default: null,
       },
+      value: {
+        type: String,
+        default: null,
+      },
       placeholder: {
         type: String,
         default: null,
       },
+    },
+    data() {
+      return {
+        name: this.id,
+      };
     },
     computed: {
       localType() {
