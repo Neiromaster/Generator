@@ -1,0 +1,165 @@
+{
+    "fieldsGroups": [
+        {
+            "fields": [
+                {
+                    "type": "field",
+                    "code": "lastname"
+                },
+                {
+                    "type": "field",
+                    "code": "firstname"
+                },
+                {
+                    "type": "field",
+                    "code": "secondname"
+                },
+                {
+                    "type": "field",
+                    "code": "sex"
+                },
+                {
+                    "type": "group",
+                    "fields": [
+                        {
+                            "type": "field",
+                            "code": "submit"
+                        },
+                        {
+                            "type": "field",
+                            "code": "forgot"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "fields": [
+                {
+                    "type": "group",
+                    "fields": [
+                        {
+                            "type": "field",
+                            "code": "checkbox1"
+                        },
+                        {
+                            "type": "field",
+                            "code": "checkbox2"
+                        }
+                    ]
+                },
+                {
+                    "type": "field",
+                    "code": "password"
+                },
+                {
+                    "type": "field",
+                    "code": "email"
+                },
+                {
+                    "type": "group",
+                    "fields": [
+                        {
+                            "type": "field",
+                            "code": "checkbox3"
+                        },
+                        {
+                            "type": "field",
+                            "code": "remember"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "id": "lastname",
+            "type": "text",
+            "title": "Фамилия",
+            "value": "Иванов",
+            "placeholder": "Введите Вашу Фамилию"
+        },
+        {
+            "id": "firstname",
+            "type": "text",
+            "title": "Имя",
+            "value": "Иван",
+            "placeholder": "Введите Ваше Имя"
+        },
+        {
+            "id": "secondname",
+            "type": "text",
+            "title": "Отчество",
+            "value": "Иванович",
+            "placeholder": "Введите Ваше Отчество"
+        },
+        {
+            "id": "sex",
+            "type": "select",
+            "title": "Пол",
+            "value": "male",
+            "placeholder": "Выберите Ваш пол",
+            "options": [
+                {
+                    "key": "woman",
+                    "value": "Женщина"
+                },
+                {
+                    "key": "male",
+                    "value": "Мужчина"
+                }
+            ]
+        },
+        {
+            "id": "checkbox1",
+            "type": "checkbox",
+            "title": "Признак 1",
+            "checked": true
+        },
+        {
+            "id": "checkbox2",
+            "type": "checkbox",
+            "title": "Признак 2",
+            "checked": false
+        },
+        {
+            "id": "password",
+            "type": "password",
+            "title": "Пароль",
+            "value": "",
+            "placeholder": "Введите Ваш пароль"
+        },
+        {
+            "id": "email",
+            "type": "text",
+            "title": "Email",
+            "value": "",
+            "placeholder": "Введите Ваш e-mail"
+        },
+        {
+            "id": "checkbox3",
+            "type": "checkbox",
+            "title": "Запомните меня",
+            "checked": true
+        },
+        {
+            "id": "remember",
+            "type": "link",
+            "title": "Я забыл свой пароль",
+            "href": "http://npoprogress.com/"
+        },
+        {
+            "id": "submit",
+            "type": "button",
+            "action": "submit",
+            "title": "Войти"
+        },
+        {
+            "id": "reg",
+            "type": "link",
+            "title": "Зарегистрироваться",
+            "href": "http://yandex.ru"
+        }
+    ]
+}
