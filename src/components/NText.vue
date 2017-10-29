@@ -1,5 +1,5 @@
 <template>
-  <div class="form-group">
+  <div class="form-group col-xs-12">
     <label
       v-if="title"
       :for="id"

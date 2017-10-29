@@ -1,32 +1,40 @@
 <template>
   <div id="app">
     <div class="container panel panel-default">
-      <form action="#" role="form">
-        <button class="btn btn-primary col-xs-12">Вход</button>
+      <form action="" role="form">
+        <n-generator :groups="fieldsGroups" :fields="fields"></n-generator>
       </form>
-      <p>{{ erdqwr }}</p>
     </div>
   </div>
 </template>
 
 <script>
-  import NCheckbox from './components/NCheckbox';
+  import NGenerator from './components/generator';
 
   export default {
     name: 'app',
     components: {
-      NCheckbox,
+      NGenerator,
     },
     data() {
       return {
-        erdqwr: true,
+        fieldsGroups: [],
+        fields: [],
       };
     },
-
-    watch: {
-      erdqwr(newVal) {
-        console.log(newVal);
+    methods: {
+      fetchData() {
+        return fetch('/static/json/testdata.json')
+          .then(value => value.json());
       },
+      initData({ fieldsGroups, fields }) {
+        this.fieldsGroups = fieldsGroups;
+        this.fields = fields;
+      },
+    },
+    mounted() {
+      this.fetchData()
+        .then(this.initData);
     },
   };
 </script>

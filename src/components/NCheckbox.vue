@@ -1,5 +1,5 @@
 <template>
-  <div class="checkbox">
+  <div class="checkbox col-xs-12">
     <input class="checkbox"
            type="checkbox"
            :id="id"
@@ -35,6 +35,7 @@
 <style scoped>
   .checkbox input[type="checkbox"] {
     opacity: 0;
+    display: none;
   }
 
   .checkbox label {
